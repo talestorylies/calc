@@ -44,9 +44,7 @@ public static String translate(String s, int k){
    int index = s.indexOf("-");
    String headstr = s.substring(0,index);
    String leftstr = s.substring(index+1);
-
-
-    leftstr = leftstr.replace("-","");
+   leftstr = leftstr.replace("-","");
    result.append(headstr).append("-");
    int upcount =0;
    int lowcount=0;
@@ -58,7 +56,6 @@ public static String translate(String s, int k){
        if(Character.isLowerCase(c)){lowcount++;}
 
        if (temp.length()==k){
-
            if(lowcount>upcount){
                result.append( temp.toString().toLowerCase());
            }
